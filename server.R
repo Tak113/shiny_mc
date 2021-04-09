@@ -59,19 +59,16 @@ server <- function(input, output, session) {
   
   #Make sidebar collapse into icons instead of nothing
   runjs({"
-        var el2 = document.querySelector('.skin-purple');
-        el2.className = 'skin-purple sidebar-mini';
+        var el2 = document.querySelector('.skin-green');
+        el2.className = 'skin-green sidebar-mini';
         "})
   
   
   # load files --------------------------------------------------------------
-  source('server_rms_arc.R', local = TRUE)
-  source('server_rms_procblock.R', local = TRUE)
-  source('server_rms_arcblockmap.R', local = TRUE)
-  source('server_rms_equip.R', local = TRUE)
-  source('server_rms_blockopsmap.R', local = TRUE)
-  source('server_rms_mtrl.R', local = TRUE)
-  source('server_app_master.R', local = TRUE)
+  # source('server_range.R', local = TRUE)
+  # source('server_shap.R', local = TRUE)
+  # source('server_bayes.R', local = TRUE)
+  # source('server_retire.R', local = TRUE)
   
 }
 

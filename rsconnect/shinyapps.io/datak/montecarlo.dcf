@@ -1,0 +1,12 @@
+name: montecarlo
+title: montecarlo
+username:
+account: datak
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3935095
+bundleId: 4449493
+url: https://datak.shinyapps.io/montecarlo/
+when: 1617952295.87378
+asMultiple: FALSE
+asStatic: FALSE

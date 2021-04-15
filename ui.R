@@ -14,7 +14,7 @@ sidebar <- dashboardSidebar(width = "250px", collapsed = TRUE,
                               
                               menuItem("Read me first", tabName = 'readmefirst', icon = icon("home")),
                               menuItem("Simulations", icon = icon("calculator"),
-                                       menuSubItem("Explanable AI", tabName = 'shap', icon = icon("chart-bar")),
+                                       menuSubItem("Explainable AI", tabName = 'shap', icon = icon("chart-bar")),
                                        menuSubItem("Uncertainty", tabName = 'bayes', icon = icon("chart-line")),
                                        menuSubItem("Range Interval", tabName = 'range', icon = icon("chart-area")),
                                        menuSubItem("Random Walk", tabName = 'walk', icon = icon("chart-line"))

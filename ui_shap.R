@@ -4,7 +4,7 @@ tabItem_shap <-
       
 
 # Header ------------------------------------------------------------------
-      tags$h2('Explainable AI : Simulating contributions for each features'),
+      tags$h2('Explainable AI : Simulating each features contributions'),
       p('The explainable AI is based on',
         tags$a(href='https://github.com/slundberg/shap', 'SHAP'),
         'and applied for',
@@ -33,15 +33,23 @@ tabItem_shap <-
               sliderInput('ptratio', 'Student / Teacher', min=12, max=22, value=18, step=1), #original ptratio = ptratio
                 bsTooltip('ptratio','(ptratio) Number of students per teacher'),
               sliderInput('dis', 'Cities Distance (Ml)', min=1, max=10, value=4, step=1), #original dis = dis
+                bsTooltip('dis','(dis) Weighted distance from main cities in Boston'),
               sliderInput('black', 'Black Rate (%)', min=1, max=50, value=5, step=5), #original black = 1000(black/100-0.63)^2
-              sliderInput('tax', 'Tax (%)', min=2, max=7, value=4, step=0.5) #original tax = 100 * tax
+                bsTooltip('black','(black) Percentange of Black over a population'),
+              sliderInput('tax', 'Tax (%)', min=2, max=7, value=4, step=0.5), #original tax = 100 * tax
+                bsTooltip('tax','(tax) Percentange of tax against income')
             ),
             column(6,
               sliderInput('rm', '# of Rooms', min=3, max=9, value=6, step=1), #origina rm = rm
+                bsTooltip('rm','(rm) Number of rooms per home'),
               sliderInput('crim', 'Crim Rate (/ppl/yr)', min=0.05, max=1, value=0.2, step=0.05), #original crim = crim
+                bsTooltip('crim','(crim) Annual crime rate per person'),
               sliderInput('nox', 'NOx Density (ppm)', min=2, max=8, value=5, step=0.5), #original nox = nox * 0.1
+                bsTooltip('nox','(nox) NOx density, particule per million'),
               sliderInput('age', 'Old House Rate (%)', min=10, max=100, value=60, step=10), #original age = age
-              sliderInput('indus', 'Non Retail Rate (%)', min=5, max=24, value=10, step=2) #original indus = indus
+                bsTooltip('age','(age) Percentage of old house'),
+              sliderInput('indus', 'Non Retail Rate (%)', min=5, max=24, value=10, step=2), #original indus = indus
+                bsTooltip('indus','(indus) Percentage of non-retail shop/company in town')
             ),
             column(12,
               br(),

@@ -10,7 +10,7 @@ library(caret) #machine learning library
 library(DALEX) #prep library to run shap
 library(shapper) #explainable AI
 library(MASS) #for Boston dataset
-
+library(gbm) #gradientboosting
 
 # basic authentication ----------------------------------------------------
 

@@ -1,5 +1,6 @@
 server <- function(input, output, session) {
   
+
   
   # login modules -----------------------------------------------------------
   
@@ -69,6 +70,25 @@ server <- function(input, output, session) {
   # source('server_range.R', local = TRUE)
   # source('server_bayes.R', local = TRUE)
   # source('server_retire.R', local = TRUE)
+  
+  
+  # App virtualenv setup ----------------------------------------------------
+    #ref : https://github.com/ranikay/shiny-reticulate-app
+    # this only works for remote, do not follow local case at .Rprofile
+  
+  if (Sys.info()[['user']] == 'shiny') {
+    
+    virtualenv_dir = Sys.getenv('VIRTUALENV_NAME')
+    python_path = Sys.getenv('PYTHON_PATH')
+    
+    # Define any Python packages needed for the app here:
+    PYTHON_DEPENDENCIES = c('pip', 'numpy', 'shap', 'gbm')
+      
+    # Create virtual env and install dependencies
+    reticulate::virtualenv_create(envname = virtualenv_dir, python = python_path)
+    reticulate::virtualenv_install(virtualenv_dir, packages = PYTHON_DEPENDENCIES, ignore_installed=TRUE)
+    reticulate::use_virtualenv(virtualenv_dir, required = T)
+  }
   
 }
 

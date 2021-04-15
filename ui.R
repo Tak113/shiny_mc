@@ -1,7 +1,7 @@
 
 # load sub files for each pages -------------------------------------------
 source('ui_readmefirst.R', local = TRUE)
-# source('ui_shap.R', local = TRUE)
+source('ui_shap.R', local = TRUE)
 # source('ui_bayes.R', local = TRUE)
 # source('ui_range.R', local = TRUE)
 # source('ui_walk.R', local = TRUE)
@@ -29,9 +29,9 @@ sidebar <- dashboardSidebar(width = "250px", collapsed = TRUE,
 body <- dashboardBody(
   tabItems(
     
-    tabItem_readmefirst
+    tabItem_readmefirst,
+    tabItem_shap
     # tabItem_range,
-    # tabItem_shap,
     # tabItem_bayes,
     # tabItem_retire
     

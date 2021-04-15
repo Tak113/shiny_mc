@@ -65,8 +65,8 @@ server <- function(input, output, session) {
   
   
   # load files --------------------------------------------------------------
+  source('server_shap.R', local = TRUE)
   # source('server_range.R', local = TRUE)
-  # source('server_shap.R', local = TRUE)
   # source('server_bayes.R', local = TRUE)
   # source('server_retire.R', local = TRUE)
   
